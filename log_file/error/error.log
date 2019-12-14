@@ -1,0 +1,124 @@
+[2019-10-22 14:21:20,269][MainThread:140137272538880][task_id:daphne.server][server.py:157][CRITICAL][Listen failure: Couldn't listen on 127.0.0.1:9090: [Errno 98] Address already in use.]
+[2019-10-22 17:20:46,174][MainThread:139943057360640][task_id:daphne.server][server.py:157][CRITICAL][Listen failure: Couldn't listen on 192.168.233.129:8080: [Errno 99] Cannot assign requested address.]
+[2019-10-22 17:21:26,729][MainThread:140373414541056][task_id:daphne.server][server.py:157][CRITICAL][Listen failure: Couldn't listen on 127.0.0.1:8080: [Errno 98] Address already in use.]
+[2019-10-22 17:22:54,280][MainThread:140065461602048][task_id:daphne.server][server.py:157][CRITICAL][Listen failure: Couldn't listen on 127.0.0.1:9090: [Errno 98] Address already in use.]
+[2019-10-23 16:14:42,880][MainThread:140362772928256][task_id:daphne.server][server.py:157][CRITICAL][Listen failure: Couldn't listen on 0.0.0.0:8081: [Errno 98] Address already in use.]
+[2019-10-23 16:14:44,707][MainThread:139652494907136][task_id:daphne.server][server.py:157][CRITICAL][Listen failure: Couldn't listen on 0.0.0.0:8081: [Errno 98] Address already in use.]
+[2019-10-23 16:14:47,993][MainThread:140001895966464][task_id:daphne.server][server.py:157][CRITICAL][Listen failure: Couldn't listen on 0.0.0.0:8081: [Errno 98] Address already in use.]
+[2019-10-23 16:14:52,781][MainThread:139735538833152][task_id:daphne.server][server.py:157][CRITICAL][Listen failure: Couldn't listen on 0.0.0.0:8081: [Errno 98] Address already in use.]
+[2019-10-23 18:54:10,099][MainThread:139886211528448][task_id:daphne.server][server.py:286][ERROR][Exception inside application: 'NoneType' object has no attribute 'tag'
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/asyncio/tasks.py", line 242, in _step
+    result = coro.throw(exc)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels/utils.py", line 52, in await_many_dispatch
+    await dispatch(result)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels/consumer.py", line 73, in dispatch
+    await handler(message)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels/generic/websocket.py", line 198, in websocket_receive
+    await self.receive(bytes_data=message["bytes"])
+  File "/shiw/three_server/notice/consumers.py", line 53, in receive
+    result = router[message](self.channel_name, **data_json['data'])
+  File "/shiw/three_server/game/api/api.py", line 48, in bet
+    return create_result(hall.tag, event, {'code': ServerCode.CODE41001.value, 'msg': ServerMsg.CODE41001.value, 'gold': params['bet_amount']})
+  'NoneType' object has no attribute 'tag']
+[2019-10-23 19:20:46,232][uWSGIWorker3Core0:139710550398784][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/hall/hall/switch]
+Traceback (most recent call last):
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "./three_server/base/controller.py", line 98, in dispatch
+    return handler()
+  File "/shiw/three_server/hall/api/server_hall.py", line 28, in switch
+    return self.json(ResultCode.CODE_60009.value, None, ResultMsg.MSG_60009.value)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/enum.py", line 274, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: CODE_60009
+[2019-10-23 19:23:49,117][uWSGIWorker5Core0:139710550398784][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/hall/hall/switch]
+Traceback (most recent call last):
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "./three_server/base/controller.py", line 98, in dispatch
+    return handler()
+  File "/shiw/three_server/hall/api/server_hall.py", line 28, in switch
+    return self.json(ResultCode.CODE_60009.value, None, ResultMsg.MSG_60009.value)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/enum.py", line 274, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: CODE_60009
+[2019-10-24 14:42:50,295][uWSGIWorker3Core0:140187712640832][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/recharge/check]
+Traceback (most recent call last):
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "./three_server/base/controller.py", line 98, in dispatch
+    return handler()
+  File "/shiw/three_server/finance/api/server_recharge_record.py", line 27, in check
+    update_player_info(player)
+  File "/shiw/three_server/player/notice/player_notice.py", line 30, in update_player_info
+    'gold': str(player.gold)
+  File "/shiw/three_server/notice/biz/notice.py", line 32, in notice_player
+    'data': data
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/asgiref/sync.py", line 115, in __call__
+    return call_result.result()
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/concurrent/futures/_base.py", line 398, in result
+    return self.__get_result()
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/concurrent/futures/_base.py", line 357, in __get_result
+    raise self._exception
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/asgiref/sync.py", line 155, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels_redis/core.py", line 276, in send
+    assert self.valid_channel_name(channel), "Channel name not valid"
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels/layers.py", line 160, in valid_channel_name
+    + "alphanumerics, hyphens, or periods, not '{}'.".format(name)
+TypeError: Channel name must be a valid unicode string containing only ASCII alphanumerics, hyphens, or periods, not 'None'.
+[2019-10-24 14:43:10,399][uWSGIWorker3Core0:140187712640832][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/recharge/check]
+Traceback (most recent call last):
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "./three_server/base/controller.py", line 98, in dispatch
+    return handler()
+  File "/shiw/three_server/finance/api/server_recharge_record.py", line 27, in check
+    update_player_info(player)
+  File "/shiw/three_server/player/notice/player_notice.py", line 30, in update_player_info
+    'gold': str(player.gold)
+  File "/shiw/three_server/notice/biz/notice.py", line 32, in notice_player
+    'data': data
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/asgiref/sync.py", line 115, in __call__
+    return call_result.result()
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/concurrent/futures/_base.py", line 398, in result
+    return self.__get_result()
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/concurrent/futures/_base.py", line 357, in __get_result
+    raise self._exception
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/asgiref/sync.py", line 155, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels_redis/core.py", line 276, in send
+    assert self.valid_channel_name(channel), "Channel name not valid"
+  File "/usr/anaconda3/envs/three_server/lib/python3.5/site-packages/channels/layers.py", line 160, in valid_channel_name
+    + "alphanumerics, hyphens, or periods, not '{}'.".format(name)
+TypeError: Channel name must be a valid unicode string containing only ASCII alphanumerics, hyphens, or periods, not 'None'.

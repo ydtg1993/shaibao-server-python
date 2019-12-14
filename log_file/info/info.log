@@ -1,0 +1,2 @@
+[2019-11-03 20:26:45,862][uWSGIWorker4Core0:140187712640832][task_id:django.request][log.py:228][WARNING][Not Found: /thinkphp/html/public/index.php]
+[2019-11-03 20:26:46,354][uWSGIWorker4Core0:140187712640832][task_id:django.request][log.py:228][WARNING][Not Found: /index.php]

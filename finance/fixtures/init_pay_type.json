@@ -1,0 +1,18 @@
+[
+  {
+    "model": "finance.PayType",
+    "pk": 1,
+    "fields": {
+      "name": "银行卡支付",
+      "active": true
+    }
+  },
+  {
+    "model": "finance.PayType",
+    "pk": 2,
+    "fields": {
+      "name": "快捷支付",
+      "active": true
+    }
+  }
+]

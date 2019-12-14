@@ -1,0 +1,522 @@
+[2019-10-06 14:26:14,590][Thread-17:22600][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/bank_account/search]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\server_bank_account.py", line 13, in search
+    data = search(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\server_bank_account.py", line 5, in search
+    result = BankAccount.search_server(**params)
+TypeError: search_server() got an unexpected keyword argument 'hall_id'
+[2019-10-06 14:26:14,594][MainThread:7088][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /api/finance/bank_account/search 500 [1.47, 127.0.0.1:5812]]
+[2019-10-06 14:27:19,447][Thread-1:27996][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/bank_account/search]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\server_bank_account.py", line 13, in search
+    data = search(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\server_bank_account.py", line 5, in search
+    result = BankAccount.search_server(**params)
+TypeError: search_server() got an unexpected keyword argument 'hall_id'
+[2019-10-06 14:27:19,450][MainThread:3660][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /api/finance/bank_account/search 500 [0.16, 127.0.0.1:5904]]
+[2019-10-06 18:56:36,529][Thread-1:60212][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/bank_account/add]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\server_bank_account.py", line 20, in add
+    add(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\server_bank_account.py", line 20, in add
+    BankAccount.add(**params)
+  File "D:\WorkSpase\Python\three_server\finance\models\bank_account.py", line 18, in add
+    cls(params).save()
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 851, in _save_table
+    forced_update)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 880, in _do_update
+    filtered = base_qs.filter(pk=pk_val)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1251, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1116, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\lookups.py", line 20, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\lookups.py", line 70, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'dict'
+[2019-10-06 18:56:36,537][MainThread:11044][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /api/finance/bank_account/add 500 [0.23, 127.0.0.1:8144]]
+[2019-10-06 20:06:30,537][Thread-1:30312][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/fast_account/add]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: 错误:  对于可变字符类型来说，值太长了(12)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\server_fast_account.py", line 20, in add
+    add(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\server_fast_account.py", line 17, in add
+    FastAccount.add(**params)
+  File "D:\WorkSpase\Python\three_server\finance\models\fast_account.py", line 16, in add
+    cls(**params).save()
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: 错误:  对于可变字符类型来说，值太长了(12)
+
+[2019-10-06 20:06:30,544][MainThread:17976][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /api/finance/fast_account/add 500 [0.27, 127.0.0.1:12782]]
+[2019-10-06 21:27:34,789][Thread-27:10180][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/fast_account/active]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 95, in dispatch
+    handler = getattr(self, action)
+AttributeError: 'ServerFastAccountController' object has no attribute 'active'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 96, in dispatch
+    except NotImplemented:
+TypeError: catching classes that do not inherit from BaseException is not allowed
+[2019-10-06 21:27:34,792][MainThread:55412][task_id:django.channels.server][runserver.py:154][ERROR][HTTP GET /api/finance/fast_account/active?obj_id=4 500 [0.12, 127.0.0.1:2325]]
+[2019-10-06 21:27:57,319][Thread-1:34392][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/fast_account/search]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1768, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1504, in setup_joins
+    names[:pivot], opts, allow_many, fail_on_missing=True,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1420, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'active' into field. Choices are: account_name, account_number, create_at, id, qr_code, update_at
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\server_fast_account.py", line 13, in search
+    data = search(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\server_fast_account.py", line 5, in search
+    result = FastAccount.search_server(**params)
+  File "D:\WorkSpase\Python\three_server\finance\models\fast_account.py", line 49, in search_server
+    'active',
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 798, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 793, in _values
+    clone.query.set_values(fields)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 2020, in set_values
+    self.add_fields(field_names, True)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1791, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'active' into field. Choices are: account_name, account_number, create_at, id, qr_code, update_at
+[2019-10-06 21:27:57,328][MainThread:9300][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /api/finance/fast_account/search 500 [0.20, 127.0.0.1:2359]]
+[2019-10-06 21:28:02,536][Thread-1:34392][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/fast_account/search]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1768, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1504, in setup_joins
+    names[:pivot], opts, allow_many, fail_on_missing=True,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1420, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'active' into field. Choices are: account_name, account_number, create_at, id, qr_code, update_at
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\server_fast_account.py", line 13, in search
+    data = search(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\server_fast_account.py", line 5, in search
+    result = FastAccount.search_server(**params)
+  File "D:\WorkSpase\Python\three_server\finance\models\fast_account.py", line 49, in search_server
+    'active',
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 798, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 793, in _values
+    clone.query.set_values(fields)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 2020, in set_values
+    self.add_fields(field_names, True)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1791, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'active' into field. Choices are: account_name, account_number, create_at, id, qr_code, update_at
+[2019-10-06 21:28:02,544][MainThread:9300][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /api/finance/fast_account/search 500 [0.22, 127.0.0.1:2372]]
+[2019-10-06 21:57:21,209][Thread-3:54616][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/pay_method]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 47, in pay_method
+    data = pay_method()
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 23, in pay_method
+    } for d in BankAccount.search_client()}
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 23, in <setcomp>
+    } for d in BankAccount.search_client()}
+TypeError: unhashable type: 'dict'
+[2019-10-06 21:57:21,213][MainThread:44844][task_id:django.channels.server][runserver.py:154][ERROR][HTTP GET /three/finance/pay/pay_method 500 [0.15, 127.0.0.1:3818]]
+[2019-10-06 21:59:36,111][Thread-1:54336][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/pay_method]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 47, in pay_method
+    data = pay_method()
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 25, in pay_method
+    } for d in BankAccount.search_client()}
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 25, in <setcomp>
+    } for d in BankAccount.search_client()}
+TypeError: unhashable type: 'dict'
+[2019-10-06 21:59:36,115][MainThread:53424][task_id:django.channels.server][runserver.py:154][ERROR][HTTP GET /three/finance/pay/pay_method 500 [0.15, 127.0.0.1:3872]]
+[2019-10-07 12:11:38,210][Thread-19:59148][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/pay_method]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 47, in pay_method
+    data = pay_method()
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 25, in pay_method
+    } for d in BankAccount.search_client()}
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 25, in <setcomp>
+    } for d in BankAccount.search_client()}
+TypeError: unhashable type: 'dict'
+[2019-10-07 12:11:38,213][MainThread:28632][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /three/finance/pay/pay_method 500 [1.34, 192.168.50.166:62987]]
+[2019-10-07 12:12:13,546][Thread-2:51848][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/pay_method]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 47, in pay_method
+    data = pay_method()
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 25, in pay_method
+    } for d in BankAccount.search_client()}
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 25, in <setcomp>
+    } for d in BankAccount.search_client()}
+TypeError: unhashable type: 'dict'
+[2019-10-07 12:12:13,549][MainThread:20064][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /three/finance/pay/pay_method 500 [0.12, 192.168.50.166:63097]]
+[2019-10-07 12:12:27,327][Thread-1:41540][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/pay_method]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 47, in pay_method
+    data = pay_method()
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 25, in pay_method
+    } for d in BankAccount.search_client()}
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 25, in <setcomp>
+    } for d in BankAccount.search_client()}
+TypeError: unhashable type: 'dict'
+[2019-10-07 12:12:27,331][MainThread:7568][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /three/finance/pay/pay_method 500 [0.15, 192.168.50.166:63110]]
+[2019-10-07 14:55:07,383][Thread-16:26176][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/to_pay]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 73, in to_pay
+    if not to_pay(**form.data):
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 40, in to_pay
+    account_id=fa.id,
+  File "D:\WorkSpase\Python\three_server\finance\models\recharge_record.py", line 20, in add
+    cls(params).save()
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 851, in _save_table
+    forced_update)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 880, in _do_update
+    filtered = base_qs.filter(pk=pk_val)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1251, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1116, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\lookups.py", line 20, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\lookups.py", line 70, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'dict'
+[2019-10-07 14:55:07,391][MainThread:49644][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /three/finance/pay/to_pay 500 [0.25, 192.168.50.166:49293]]
+[2019-10-07 14:55:42,565][Thread-1:31452][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/to_pay]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: 错误:  关系 "finance_recharge_record" 不存在
+LINE 1: INSERT INTO "finance_recharge_record" ("create_at", "update_...
+                    ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 73, in to_pay
+    if not to_pay(**form.data):
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 40, in to_pay
+    account_id=fa.id,
+  File "D:\WorkSpase\Python\three_server\finance\models\recharge_record.py", line 20, in add
+    cls(**params).save()
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: 错误:  关系 "finance_recharge_record" 不存在
+LINE 1: INSERT INTO "finance_recharge_record" ("create_at", "update_...
+                    ^
+
+[2019-10-07 14:55:42,575][MainThread:56080][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /three/finance/pay/to_pay 500 [0.22, 192.168.50.166:49610]]
+[2019-10-07 15:02:14,900][Thread-1:34724][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/record]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 114, in record
+    data = record(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 66, in record
+    } for d in result['ls']]
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 66, in <listcomp>
+    } for d in result['ls']]
+  File "C:\Users\SHIW\.conda\envs\python35\lib\enum.py", line 274, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: PayStatus
+[2019-10-07 15:02:14,904][MainThread:8720][task_id:django.channels.server][runserver.py:154][ERROR][HTTP GET /three/finance/pay/record 500 [0.14, 127.0.0.1:12406]]
+[2019-10-07 15:02:58,465][Thread-1:53068][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/finance/pay/record]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\client_pay.py", line 114, in record
+    data = record(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 66, in record
+    } for d in result['ls']]
+  File "D:\WorkSpase\Python\three_server\finance\biz\client_pay.py", line 66, in <listcomp>
+    } for d in result['ls']]
+KeyError: 'status'
+[2019-10-07 15:02:58,468][MainThread:17452][task_id:django.channels.server][runserver.py:154][ERROR][HTTP GET /three/finance/pay/record 500 [0.14, 127.0.0.1:12429]]
+[2019-10-07 17:56:27,368][Thread-1:15764][task_id:django.request][log.py:228][ERROR][Internal Server Error: /api/finance/recharge/search]
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1768, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1504, in setup_joins
+    names[:pivot], opts, allow_many, fail_on_missing=True,
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1420, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'player_name' into field. Choices are: account_id, create_at, depositor, id, pay_money, payee, player, player_id, status, type, update_at
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\finance\api\server_recharge_record.py", line 13, in search
+    data = search(**form.data)
+  File "D:\WorkSpase\Python\three_server\finance\biz\server_recharge_record.py", line 5, in search
+    result = RechargeRecord.search_server(**params)
+  File "D:\WorkSpase\Python\three_server\finance\models\recharge_record.py", line 36, in search_server
+    'status'
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 798, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\query.py", line 793, in _values
+    clone.query.set_values(fields)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 2020, in set_values
+    self.add_fields(field_names, True)
+  File "C:\Users\SHIW\.conda\envs\python35\lib\site-packages\django\db\models\sql\query.py", line 1791, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'player_name' into field. Choices are: account_id, create_at, depositor, id, pay_money, payee, player, player_id, status, type, update_at
+[2019-10-07 17:56:27,374][MainThread:21496][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /api/finance/recharge/search 500 [0.18, 127.0.0.1:6691]]

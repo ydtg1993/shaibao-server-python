@@ -1,0 +1,2 @@
+[2019-11-03 20:26:45,759][uWSGIWorker1Core0:140187712640832][task_id:django.request][log.py:228][WARNING][Not Found: /TP/index.php]
+[2019-11-03 20:26:46,263][uWSGIWorker1Core0:140187712640832][task_id:django.request][log.py:228][WARNING][Not Found: /elrekt.php]

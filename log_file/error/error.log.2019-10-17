@@ -1,0 +1,216 @@
+[2019-10-17 14:17:10,633][Thread-3:11568][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:17:10,637][MainThread:6708][task_id:django.channels.server][runserver.py:154][ERROR][HTTP GET /auth/client/registered 500 [0.09, 127.0.0.1:5858]]
+[2019-10-17 14:17:19,276][Thread-2:6640][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:17:19,279][MainThread:6708][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.04, 127.0.0.1:5858]]
+[2019-10-17 14:17:20,289][Thread-4:15184][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:17:20,292][MainThread:6708][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.04, 127.0.0.1:5858]]
+[2019-10-17 14:17:21,207][Thread-1:15624][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:17:21,210][MainThread:6708][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.04, 127.0.0.1:5858]]
+[2019-10-17 14:17:46,931][Thread-1:4116][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:17:46,934][MainThread:9180][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.04, 127.0.0.1:6201]]
+[2019-10-17 14:20:05,202][Thread-1:4116][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:20:05,207][MainThread:9180][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.05, 127.0.0.1:6348]]
+[2019-10-17 14:20:10,955][Thread-2:10332][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:20:10,958][MainThread:9180][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.04, 127.0.0.1:6348]]
+[2019-10-17 14:20:39,581][Thread-4:9016][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:20:39,584][MainThread:9180][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.03, 127.0.0.1:6348]]
+[2019-10-17 14:20:44,123][Thread-1:4116][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 77, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:20:44,126][MainThread:9180][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.04, 127.0.0.1:6348]]
+[2019-10-17 14:22:34,847][Thread-5:2436][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/send_code]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 150, in send_code
+    form = SendCodeForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:22:34,850][MainThread:9180][task_id:django.channels.server][runserver.py:154][ERROR][HTTP GET /auth/client/send_code 500 [0.04, 127.0.0.1:6456]]
+[2019-10-17 14:30:11,099][Thread-1:13696][task_id:django.request][log.py:228][ERROR][Internal Server Error: /auth/client/registered]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\api\client_auth.py", line 80, in client_registered
+    form = ClientRegisteredForm(json.loads(request.body.decode()))
+  File "C:\Program Files\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-10-17 14:30:11,101][MainThread:8496][task_id:django.channels.server][runserver.py:154][ERROR][HTTP POST /auth/client/registered 500 [0.05, 127.0.0.1:6645]]
+[2019-10-17 14:47:37,030][Thread-1:13324][task_id:django.request][log.py:228][ERROR][Internal Server Error: /three/announcement/pig/open]
+Traceback (most recent call last):
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\WorkSpase\Python\three_server\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\WorkSpase\Python\three_server\three_server\base\controller.py", line 98, in dispatch
+    return handler()
+  File "D:\WorkSpase\Python\three_server\announcement\api\client_pig.py", line 47, in open
+    data = pig_open(token)
+  File "D:\WorkSpase\Python\three_server\announcement\biz\client_pig.py", line 30, in pig_open
+    value -= 1
+TypeError: unsupported operand type(s) for -=: 'str' and 'int'
+[2019-10-17 14:47:37,034][MainThread:7100][task_id:django.channels.server][runserver.py:154][ERROR][HTTP GET /three/announcement/pig/open 500 [0.11, 127.0.0.1:7377]]

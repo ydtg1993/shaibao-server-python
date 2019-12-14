@@ -1,0 +1,10 @@
+[
+  {
+    "model": "announcement.Pig",
+    "pk": 1,
+    "fields": {
+      "name": "金猪活动",
+      "total": 99999
+    }
+  }
+]
